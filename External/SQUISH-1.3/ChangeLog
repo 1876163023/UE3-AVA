@@ -1,0 +1,21 @@
+
+1.3
+* Worked around SSE floor implementation bug, proper fix needed!
+* This release has visual studio and makefile builds that work
+
+1.2
+* Added provably optimal single colour compressor
+* Added extra/squishgen.cpp that generates single colour lookup tables
+
+1.1
+* Fixed a DXT1 colour output bug
+* Changed argument order for Decompress function to match Compress
+* Added GetStorageRequirements function
+* Added CompressImage function
+* Added DecompressImage function
+* Moved squishtool.cpp to extra/squishpng.cpp
+* Added extra/squishtest.cpp
+
+1.0
+* Initial release
+

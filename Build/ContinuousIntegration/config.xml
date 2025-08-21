@@ -1,0 +1,82 @@
+<!--
+Copyright 2005 Epic Games, Inc. All Rights Reserved.
+-->
+
+<!DOCTYPE cruisecontrol [ 
+	<!ENTITY benchmarkBuilder SYSTEM "file:UE3_benchmarkBuilderProject.xml">
+	<!ENTITY benchmarkDualCoreBuilder SYSTEM "file:UE3_benchmarkDualCoreBuilderProject.xml">
+	<!ENTITY codeBuilder SYSTEM "file:UE3_codeBuilderProject.xml">
+	<!ENTITY codeBuilderGemini SYSTEM "file:UE3_codeBuilderGeminiProject.xml">
+	<!ENTITY codeBuilderPC SYSTEM "file:UE3_codeBuilderPCProject.xml">
+	<!ENTITY codeBuilderPS3 SYSTEM "file:UE3_codeBuilderPS3Project.xml">
+	<!ENTITY codeBuilderXenon SYSTEM "file:UE3_codeBuilderXenonProject.xml">
+	<!ENTITY contentBuilder SYSTEM "file:UE3_contentBuilderProject.xml">
+	<!ENTITY dailyBuilder SYSTEM "file:UE3_dailyBuilderProject.xml">
+	<!ENTITY sansBuilderFaceFX SYSTEM "file:UE3_sansBuilderFaceFXProject.xml">
+	<!ENTITY sansBuilderPS3 SYSTEM "file:UE3_sansBuilderPS3Project.xml">
+	<!ENTITY sansBuilderUTPrivate SYSTEM "file:UE3_sansBuilderUTPrivateProject.xml">
+	<!ENTITY verificationBuilder SYSTEM "file:UE3_verificationBuilderProject.xml">
+	<!ENTITY xenonBVTLoc00 SYSTEM "file:UE3_xenonBVTLoc00BuilderProject.xml">
+]>
+
+
+<cruisecontrol>
+<system dateformat="yyyy-MM-dd HH:mm:ss">
+    <configuration>
+      <threads count="2"/>
+    </configuration>
+</system>
+
+  <property name="buildMachineURL" value="http://build-farm-01:8080/cruisecontrol"/>
+  <!-- <property name="buildMachineURL" value="http://localhost:8080/cruisecontrol"/> -->
+
+  <!-- all of the projects -->
+  &benchmarkBuilder;
+  &benchmarkDualCoreBuilder;
+  &codeBuilder;
+  &codeBuilderGemini;
+  &codeBuilderPC;
+  &codeBuilderPS3;
+  &codeBuilderXenon;
+  &contentBuilder;
+  &dailyBuilder;
+  &sansBuilderPS3;
+  &sansBuilderUTPrivate;
+  &verificationBuilder;
+  &xenonBVTLoc00;
+
+</cruisecontrol>
+
+
+
+
+
+<!--
+
+http://sourceforge.net/mailarchive/forum.php?thread_id=1325949&forum_id=2203
+
+Because the pauses are only as large as the
+ interval to check the schedule, only one build will fire during the time 
+ the builds are unpaused.  So technically,
+ the pause builders do my time schedule for me and using the multiple 
+ builds makes sure that
+ the build runs and avoids problems with syncing up the pauses and time 
+ schedule wierdnesses.
+ However, it doesn"t allow the rebuild to happen if failure occurs until 
+ the next unpaused time. 
+
+-->
+
+
+<!-- Do a daily build at 1300 -->
+
+
+<!--
+       <schedule interval="600">
+          <pause starttime="1310" endtime="1259"/>
+          <ant buildfile="cruise_build.xml" target="dist.master.build"
+          multiple="1"/>
+       </schedule>
+
+-->
+

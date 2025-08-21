@@ -1,0 +1,214 @@
+/*=============================================================================
+	ScopedPropertyChange.cpp: Implementation of the FScopedPropertyChange class.
+	Copyright 2006 Epic Games, Inc. All Rights Reserved.
+=============================================================================*/
+
+// Includes
+#include "UnrealEd.h"
+#include "Properties.h"
+#include "ScopedPropertyChange.h"
+
+/* ==========================================================================================================
+	FScopedPropertyChange
+========================================================================================================== */
+/**
+ * Constructor
+ *
+ * @param	InModifiedItem		the property window item corresponding to the property that was modified.
+ * @param	InModifiedProperty	alternate property to use when calling Pre/PostEditChange; if not specified,
+ *								InModifiedItem->Property is used
+ * @param	bInPreventPropertyWindowRebuild
+ *								if TRUE, will prevent CB_ObjectPropertyChanged from calling Rebuild() on the WxPropertyWindow
+ *								which contains InModifiedItem.  Useful if InModifiedItem is handling the property value change
+ *								notification itself, as Rebuild() would cause InModifiedItem to be deleted before we go out of scope.
+ */
+FScopedPropertyChange::FScopedPropertyChange( WxPropertyWindow_Base* InModifiedItem, UProperty* InModifiedProperty/*=NULL*/, UBOOL bInPreventPropertyWindowRebuild/*=FALSE*/ )
+: PropagationArchive(NULL), PreviousPropagationArchive(NULL)
+, ModifiedItem(InModifiedItem), ModifiedProperty(InModifiedProperty)
+, bPreventPropertyWindowRebuild(bInPreventPropertyWindowRebuild)
+{
+	if ( ModifiedProperty == NULL && ModifiedItem != NULL )
+	{
+		ModifiedProperty = ModifiedItem->Property;
+	}
+
+	BeginEdit();
+}
+
+/** Destructor */
+FScopedPropertyChange::~FScopedPropertyChange()
+{
+	FinishEdit();
+}
+
+/**
+ * Creates the archetype propagation archive and send the PreEditChange notifications.
+ */
+void FScopedPropertyChange::BeginEdit()
+{
+	if ( ModifiedItem != NULL )
+	{
+		// store the existing value of GMemoryArchive, so that we don't clobber it if this class is used in a recursive method
+		PreviousPropagationArchive = GMemoryArchive;
+
+		// Create an FArchetypePropagationArc to propagate the updated property values from archetypes to instances of that archetype
+		GMemoryArchive = PropagationArchive = new FArchetypePropagationArc();
+
+		// notify the object that this property's value is about to be changed
+		ModifiedItem->NotifyPreChange(ModifiedProperty);
+	}
+}
+
+/**
+ * Sends the PostEditChange notifications and deletes the archetype propagation archive.
+ */
+void FScopedPropertyChange::FinishEdit()
+{
+	if ( ModifiedItem != NULL )
+	{
+		check(PropagationArchive);
+		check(ModifiedProperty);
+
+		// now change the propagation archive to read mode
+		PropagationArchive->ActivateReader();
+
+		// Note the current property window so that CALLBACK_ObjectPropertyChanged
+		// doesn't destroy the window out from under us.
+		WxPropertyWindow* PreviousPropertyWindow = NULL;
+		if ( bPreventPropertyWindowRebuild && GApp != NULL )
+		{
+			PreviousPropertyWindow = GApp->CurrentPropertyWindow;
+			GApp->CurrentPropertyWindow = ModifiedItem->GetPropertyWindow();
+		}
+
+		// notify the object that this property's value has been changed
+		ModifiedItem->NotifyPostChange(ModifiedProperty);
+
+		// Unset, effectively making this property window updatable by CALLBACK_ObjectPropertyChanged.
+		if ( bPreventPropertyWindowRebuild && GApp != NULL )
+		{
+			GApp->CurrentPropertyWindow = PreviousPropertyWindow;
+		}
+
+		// if GMemoryArchive is still pointing to the one we created, restore it to the previous value
+		if ( GMemoryArchive == PropagationArchive )
+		{
+			GMemoryArchive = PreviousPropagationArchive;
+		}
+
+		// clean up the FArchetypePropagationArc we created
+		delete PropagationArchive;
+		PropagationArchive = NULL;
+		PreviousPropagationArchive = NULL;
+		ModifiedItem = NULL;
+		ModifiedProperty = NULL;
+	}
+}
+
+/* ==========================================================================================================
+	FScopedObjectStateChange
+========================================================================================================== */
+/**
+ * Constructor
+ *
+ * @param	InModifiedObject	the object that was modified.
+ */
+FScopedObjectStateChange::FScopedObjectStateChange( UObject* InModifiedObject )
+: ModifiedObject(InModifiedObject), PropagationArchive(NULL), PreviousPropagationArchive(NULL)
+{
+	BeginEdit();
+}
+
+/** Destructor */
+FScopedObjectStateChange::~FScopedObjectStateChange()
+{
+	FinishEdit();
+}
+
+/**
+ * Creates the archetype propagation archive and send the PreEditChange notifications.
+ */
+void FScopedObjectStateChange::BeginEdit()
+{
+	if ( ModifiedObject != NULL )
+	{
+		if ( ModifiedObject->HasAnyFlags(RF_ClassDefaultObject|RF_ArchetypeObject) )
+		{
+			// store the existing value of GMemoryArchive, so that we don't clobber it if this class is used in a recursive method
+			PreviousPropagationArchive = GMemoryArchive;
+
+			// Create an FArchetypePropagationArc to propagate the updated property values from archetypes to instances of that archetype
+			GMemoryArchive = PropagationArchive = new FArchetypePropagationArc();
+
+			// get a list of all objects which will be affected by this change; 
+			TArray<UObject*> Objects;
+			ModifiedObject->GetArchetypeInstances(Objects);
+
+			// If we're modifying an archetype, save the the property data for all instances and child classes
+			// of this archetype before the archetype's property values are changed.  Once the archetype's values
+			// have been changed, we'll refresh each instances values with the new values from the archetype, then
+			// reload the custom values for each object that were stored in the memory archive.
+			ModifiedObject->SaveInstancesIntoPropagationArchive(Objects);
+		}
+
+		// notify the object that this property's value is about to be changed
+		ModifiedObject->PreEditChange(NULL);
+	}
+}
+
+/**
+ * Sends the PostEditChange notifications and deletes the archetype propagation archive.
+ *
+ * @param	bCancelled	specify TRUE if archetype changes should NOT be propagated to instances (i.e. if the modification failed)
+ */
+void FScopedObjectStateChange::FinishEdit( UBOOL bCancelled/*=FALSE*/ )
+{
+	if ( ModifiedObject != NULL )
+	{
+		// notify the object that this property's value has been changed
+		ModifiedObject->PostEditChange(NULL);
+
+		if ( ModifiedObject->HasAnyFlags(RF_ClassDefaultObject|RF_ArchetypeObject) )
+		{
+			if ( !bCancelled )
+			{
+				check(PropagationArchive);
+
+				// now change the propagation archive to read mode
+				PropagationArchive->ActivateReader();
+
+				// first, get a list of all objects which will be affected by this change; 
+				TArray<UObject*> Objects;
+				ModifiedObject->GetArchetypeInstances(Objects);
+
+				// If we're modifying an archetype, reload the property data for all instances and child classes
+				// of this archetype, then re-import the property data for the modified properties of each object.
+				ModifiedObject->LoadInstancesFromPropagationArchive(Objects);
+			}
+
+			// if GMemoryArchive is still pointing to the one we created, restore it to the previous value
+			if ( GMemoryArchive == PropagationArchive )
+			{
+				GMemoryArchive = PreviousPropagationArchive;
+			}
+
+			// clean up the FArchetypePropagationArc we created
+			delete PropagationArchive;
+			PropagationArchive = NULL;
+			PreviousPropagationArchive = NULL;
+		}
+		else
+		{
+			// this assertion is to detect cases where the ModifiedObject had RF_ArchetypeObject or RF_ClassDefaultObject flags
+			// in BeginEdit but they were removed between BeginEdit and EndEdit
+			check(PropagationArchive == NULL);
+		}
+		ModifiedObject = NULL;
+	}
+}
+
+
+// EOF
+
+
+

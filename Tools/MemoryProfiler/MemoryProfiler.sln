@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryProfiler", "MemoryProfiler.csproj", "{4E7BF277-E41E-4B04-B7E6-9AC166E6C3F9}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectUniqueName0 = MemoryProfiler.csproj
+		SccLocalPath0 = .
+		SccLocalPath1 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E7BF277-E41E-4B04-B7E6-9AC166E6C3F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E7BF277-E41E-4B04-B7E6-9AC166E6C3F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E7BF277-E41E-4B04-B7E6-9AC166E6C3F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E7BF277-E41E-4B04-B7E6-9AC166E6C3F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

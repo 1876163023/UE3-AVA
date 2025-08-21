@@ -1,0 +1,130 @@
+/*=============================================================================
+	FMallocThreadSafeProxy.h: FMalloc proxy used to render any FMalloc thread
+							  safe.
+	Copyright 2004-2005 Epic Games, Inc. All Rights Reserved.
+=============================================================================*/
+
+/**
+ * FMalloc proxy that synchronizes access, making the used malloc thread safe.
+ */
+class FMallocThreadSafeProxy : public FMalloc
+{
+private:
+	/** Malloc we're based on, aka using under the hood							*/
+	FMalloc*		UsedMalloc;
+	/** Object used for synchronization via a scoped lock						*/
+	FCriticalSection	SynchronizationObject;
+
+public:
+	/**
+	 * Constructor for thread safe proxy malloc that takes a malloc to be used and a
+	 * synchronization object used via FScopeLock as a parameter.
+	 * 
+	 * @param	InMalloc					FMalloc that is going to be used for actual allocations
+	 */
+	FMallocThreadSafeProxy( FMalloc* InMalloc)
+	:	UsedMalloc( InMalloc )
+	{}
+
+	// FMalloc interface.
+
+	void* Malloc( DWORD Size, DWORD Alignment )
+	{
+		FScopeLock ScopeLock( &SynchronizationObject );
+		return UsedMalloc->Malloc( Size, Alignment );
+	}
+	void* Realloc( void* Ptr, DWORD NewSize, DWORD Alignment )
+	{
+		FScopeLock ScopeLock( &SynchronizationObject );
+		return UsedMalloc->Realloc( Ptr, NewSize, Alignment );
+	}
+	void Free( void* Ptr )
+	{
+		if( Ptr )
+		{
+			FScopeLock ScopeLock( &SynchronizationObject );
+			UsedMalloc->Free( Ptr );
+		}
+	}
+	void* PhysicalAlloc( DWORD Size, ECacheBehaviour InCacheBehaviour )
+	{
+		FScopeLock ScopeLock( &SynchronizationObject );
+		return UsedMalloc->PhysicalAlloc( Size, InCacheBehaviour );
+	}
+	void PhysicalFree( void* Ptr )
+	{
+		if( Ptr )
+		{
+			FScopeLock ScopeLock( &SynchronizationObject );
+			UsedMalloc->PhysicalFree( Ptr );
+		}
+	}
+	/**
+	 * Passes request for gathering memory allocations for both virtual and physical allocations
+	 * on to used memory manager.
+	 *
+	 * @param Virtual	[out] size of virtual allocations
+	 * @param Physical	[out] size of physical allocations	
+	 */
+	void GetAllocationInfo( SIZE_T& Virtual, SIZE_T& Physical )
+	{
+		FScopeLock ScopeLock( &SynchronizationObject );
+		UsedMalloc->GetAllocationInfo( Virtual, Physical );
+	}
+	void LogBacktrace( void* Ptr, DWORD Size )
+	{
+		FScopeLock ScopeLock( &SynchronizationObject );
+		UsedMalloc->LogBacktrace( Ptr, Size );
+	}
+	void DumpBacktraces( void )
+	{
+		FScopeLock ScopeLock( &SynchronizationObject );
+		UsedMalloc->DumpBacktraces();
+	}
+	/** Track all mallocs from the current thread */
+	void BeginTrackingThread( void ) 
+	{
+		FScopeLock ScopeLock( &SynchronizationObject );
+		UsedMalloc->BeginTrackingThread();
+	}
+	/** Stop tracking all mallocs from a given thread */
+	void EndTrackingThread( void ) 
+	{
+		FScopeLock ScopeLock( &SynchronizationObject );
+		UsedMalloc->EndTrackingThread();
+	}
+	void PushMemoryTag(const TCHAR* TagDescription)
+	{
+		FScopeLock ScopeLock( &SynchronizationObject );
+		UsedMalloc->PushMemoryTag(TagDescription);
+	}
+	void PopMemoryTag()
+	{
+		FScopeLock ScopeLock( &SynchronizationObject );
+		UsedMalloc->PopMemoryTag();
+	}
+	void DumpAllocs( UBOOL bSummaryOnly, FOutputDevice& Ar )
+	{
+		FScopeLock ScopeLock( &SynchronizationObject );
+		UsedMalloc->DumpAllocs( bSummaryOnly, Ar );
+	}
+	void HeapCheck()
+	{
+		FScopeLock ScopeLock( &SynchronizationObject );
+		UsedMalloc->HeapCheck();
+	}
+	void Init()
+	{
+		FScopeLock ScopeLock( &SynchronizationObject );
+		UsedMalloc->Init();
+	}
+	UBOOL Exec( const TCHAR* Cmd, FOutputDevice& Ar )
+	{
+		FScopeLock ScopeLock( &SynchronizationObject );
+		return UsedMalloc->Exec(Cmd, Ar);
+	}
+};
+
+/*-----------------------------------------------------------------------------
+	The End.
+-----------------------------------------------------------------------------*/

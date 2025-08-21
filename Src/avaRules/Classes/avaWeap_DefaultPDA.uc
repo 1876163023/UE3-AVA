@@ -1,0 +1,1 @@
+class avaWeap_DefaultPDA extends avaWeap_BasePDA;

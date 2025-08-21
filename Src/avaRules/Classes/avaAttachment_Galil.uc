@@ -1,0 +1,10 @@
+/**
+ * Copyright ?2004-2005 Epic Games, Inc. All Rights Reserved.
+ */
+class avaAttachment_Galil extends avaAttachment_BaseRifle;
+
+defaultproperties
+{
+	WeaponClass=class'avaWeap_Galil'
+}
+

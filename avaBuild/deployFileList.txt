@@ -1,0 +1,3 @@
+//ava.dev/Client/UnrealEngine3/Binaries/avaGame.exe
+//ava.dev/Client/UnrealEngine3/avaGame/Script/*.u
+//ava.dev/Client/UnrealEngine3/Development/Src/Core/Src/UnObjVer.cpp

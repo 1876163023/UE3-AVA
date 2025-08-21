@@ -1,0 +1,16 @@
+class SeqCond_IsInCombat extends SequenceCondition
+	native(Sequence);
+
+cpptext
+{
+	virtual void Activated();
+}
+
+defaultproperties
+{
+	ObjName="In Combat"
+
+	OutputLinks(0)=(LinkDesc="True")
+	OutputLinks(1)=(LinkDesc="False")
+	VariableLinks(0)=(ExpectedType=class'SeqVar_Object',LinkDesc="Players")
+}

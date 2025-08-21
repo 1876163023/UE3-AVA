@@ -1,0 +1,8 @@
+class EdModeComponent extends EditorComponent
+	native
+	noexport;
+
+/** These mirror the C++ side properties. I'm making a class here so 
+    ModelComponent will get the defaultprops from the PrimitiveComponent base class */
+ 
+ // no properties

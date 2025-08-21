@@ -1,0 +1,31 @@
+/**
+ * Copyright 2004-2005 Epic Games, Inc. All Rights Reserved.
+ */
+class ModelComponent extends PrimitiveComponent
+	native
+	noexport;
+
+
+/** These mirror the C++ side properties. I'm making a class here so
+    ModelComponent will get the defaultprops from the PrimitiveComponent base class */
+var transient native const noexport object Model;
+var transient native const noexport int ZoneIndex;
+var transient native const noexport int ComponentIndex; // (note that this is a WORD in C++, but alignment will make everything line up okay)
+var transient native const noexport array<pointer> Nodes;
+var transient native const noexport array<pointer> Edges;
+var transient native const noexport array<pointer> Elements;
+
+// model component has one depthelement, but to implement simply, add member as array<pointer> style. 2006. 9. 28 changmin
+var transient native const noexport array<pointer> DepthElements;
+var transient native const noexport int ClusterNumber;	
+
+defaultproperties
+{
+	LightingChannels=(BSP=TRUE,bInitialized=TRUE)
+	CastShadow=TRUE
+	bAcceptsLights=TRUE
+	bAcceptsDecals=TRUE
+	bUsePrecomputedShadows=TRUE
+	bUseAsOccluder=TRUE
+	bAllowApproximateOcclusion=TRUE
+}

@@ -1,0 +1,75 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "havana_constraints", "win32\havana_constraints.vcproj", "{7CE7797B-15B8-4498-91F9-3673C0320E9D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hk_base", "..\havana\havok\hk_base\hk_base.vcproj", "{F998ABFE-E958-4800-9B9F-8FF4C8A6B440}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hk_math", "..\havana\havok\hk_math\hk_math.vcproj", "{61DDA352-ED3C-4BEC-830F-B4C206A09311}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ivp_compactbuilder.lib", "Win32\ivp_compactbuilder_lib.vcproj", "{DFA1BB8A-988C-4741-937D-F0F390306678}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ivp_physics.lib", "Win32\ivp_physics_lib.vcproj", "{1C2B4987-E3BB-40B0-A158-870FA981B48B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+		SDK MultiThreaded = SDK MultiThreaded
+		SDK SingleThreaded = SDK SingleThreaded
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{7CE7797B-15B8-4498-91F9-3673C0320E9D}.Debug.ActiveCfg = Debug|Win32
+		{7CE7797B-15B8-4498-91F9-3673C0320E9D}.Debug.Build.0 = Debug|Win32
+		{7CE7797B-15B8-4498-91F9-3673C0320E9D}.Release.ActiveCfg = Release|Win32
+		{7CE7797B-15B8-4498-91F9-3673C0320E9D}.Release.Build.0 = Release|Win32
+		{7CE7797B-15B8-4498-91F9-3673C0320E9D}.SDK MultiThreaded.ActiveCfg = SDK MultiThreaded|Win32
+		{7CE7797B-15B8-4498-91F9-3673C0320E9D}.SDK MultiThreaded.Build.0 = SDK MultiThreaded|Win32
+		{7CE7797B-15B8-4498-91F9-3673C0320E9D}.SDK SingleThreaded.ActiveCfg = SDK SingleThreaded|Win32
+		{7CE7797B-15B8-4498-91F9-3673C0320E9D}.SDK SingleThreaded.Build.0 = SDK SingleThreaded|Win32
+		{F998ABFE-E958-4800-9B9F-8FF4C8A6B440}.Debug.ActiveCfg = Debug|Win32
+		{F998ABFE-E958-4800-9B9F-8FF4C8A6B440}.Debug.Build.0 = Debug|Win32
+		{F998ABFE-E958-4800-9B9F-8FF4C8A6B440}.Release.ActiveCfg = Release|Win32
+		{F998ABFE-E958-4800-9B9F-8FF4C8A6B440}.Release.Build.0 = Release|Win32
+		{F998ABFE-E958-4800-9B9F-8FF4C8A6B440}.SDK MultiThreaded.ActiveCfg = SDK MultiThreaded|Win32
+		{F998ABFE-E958-4800-9B9F-8FF4C8A6B440}.SDK MultiThreaded.Build.0 = SDK MultiThreaded|Win32
+		{F998ABFE-E958-4800-9B9F-8FF4C8A6B440}.SDK SingleThreaded.ActiveCfg = SDK SingleThreaded|Win32
+		{F998ABFE-E958-4800-9B9F-8FF4C8A6B440}.SDK SingleThreaded.Build.0 = SDK SingleThreaded|Win32
+		{61DDA352-ED3C-4BEC-830F-B4C206A09311}.Debug.ActiveCfg = Debug|Win32
+		{61DDA352-ED3C-4BEC-830F-B4C206A09311}.Debug.Build.0 = Debug|Win32
+		{61DDA352-ED3C-4BEC-830F-B4C206A09311}.Release.ActiveCfg = Release|Win32
+		{61DDA352-ED3C-4BEC-830F-B4C206A09311}.Release.Build.0 = Release|Win32
+		{61DDA352-ED3C-4BEC-830F-B4C206A09311}.SDK MultiThreaded.ActiveCfg = SDK MultiThreaded|Win32
+		{61DDA352-ED3C-4BEC-830F-B4C206A09311}.SDK MultiThreaded.Build.0 = SDK MultiThreaded|Win32
+		{61DDA352-ED3C-4BEC-830F-B4C206A09311}.SDK SingleThreaded.ActiveCfg = SDK SingleThreaded|Win32
+		{61DDA352-ED3C-4BEC-830F-B4C206A09311}.SDK SingleThreaded.Build.0 = SDK SingleThreaded|Win32
+		{DFA1BB8A-988C-4741-937D-F0F390306678}.Debug.ActiveCfg = Debug|Win32
+		{DFA1BB8A-988C-4741-937D-F0F390306678}.Debug.Build.0 = Debug|Win32
+		{DFA1BB8A-988C-4741-937D-F0F390306678}.Release.ActiveCfg = Release|Win32
+		{DFA1BB8A-988C-4741-937D-F0F390306678}.Release.Build.0 = Release|Win32
+		{DFA1BB8A-988C-4741-937D-F0F390306678}.SDK MultiThreaded.ActiveCfg = SDK MultiThreaded|Win32
+		{DFA1BB8A-988C-4741-937D-F0F390306678}.SDK MultiThreaded.Build.0 = SDK MultiThreaded|Win32
+		{DFA1BB8A-988C-4741-937D-F0F390306678}.SDK SingleThreaded.ActiveCfg = SDK SingleThreaded|Win32
+		{DFA1BB8A-988C-4741-937D-F0F390306678}.SDK SingleThreaded.Build.0 = SDK SingleThreaded|Win32
+		{1C2B4987-E3BB-40B0-A158-870FA981B48B}.Debug.ActiveCfg = Debug|Win32
+		{1C2B4987-E3BB-40B0-A158-870FA981B48B}.Debug.Build.0 = Debug|Win32
+		{1C2B4987-E3BB-40B0-A158-870FA981B48B}.Release.ActiveCfg = Release|Win32
+		{1C2B4987-E3BB-40B0-A158-870FA981B48B}.Release.Build.0 = Release|Win32
+		{1C2B4987-E3BB-40B0-A158-870FA981B48B}.SDK MultiThreaded.ActiveCfg = SDK MultiThreaded|Win32
+		{1C2B4987-E3BB-40B0-A158-870FA981B48B}.SDK MultiThreaded.Build.0 = SDK MultiThreaded|Win32
+		{1C2B4987-E3BB-40B0-A158-870FA981B48B}.SDK SingleThreaded.ActiveCfg = SDK SingleThreaded|Win32
+		{1C2B4987-E3BB-40B0-A158-870FA981B48B}.SDK SingleThreaded.Build.0 = SDK SingleThreaded|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

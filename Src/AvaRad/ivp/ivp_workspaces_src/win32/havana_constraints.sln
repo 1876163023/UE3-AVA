@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "havana_constraints", "havana_constraints.vcproj", "{96622753-43DF-45F9-BF00-5AF0698212E6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+		SDK MultiThreaded = SDK MultiThreaded
+		SDK SingleThreaded = SDK SingleThreaded
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{96622753-43DF-45F9-BF00-5AF0698212E6}.Debug.ActiveCfg = Debug|Win32
+		{96622753-43DF-45F9-BF00-5AF0698212E6}.Debug.Build.0 = Debug|Win32
+		{96622753-43DF-45F9-BF00-5AF0698212E6}.Release.ActiveCfg = Release|Win32
+		{96622753-43DF-45F9-BF00-5AF0698212E6}.Release.Build.0 = Release|Win32
+		{96622753-43DF-45F9-BF00-5AF0698212E6}.SDK MultiThreaded.ActiveCfg = SDK MultiThreaded|Win32
+		{96622753-43DF-45F9-BF00-5AF0698212E6}.SDK MultiThreaded.Build.0 = SDK MultiThreaded|Win32
+		{96622753-43DF-45F9-BF00-5AF0698212E6}.SDK SingleThreaded.ActiveCfg = SDK SingleThreaded|Win32
+		{96622753-43DF-45F9-BF00-5AF0698212E6}.SDK SingleThreaded.Build.0 = SDK SingleThreaded|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

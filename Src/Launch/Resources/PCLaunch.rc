@@ -1,0 +1,756 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+//IDICON_Game             ICON                    "Unreal.ico"
+
+#if WARGAME || GEARGAME
+IDICON_GoW              ICON                    "GoW.ico"
+IDICON_Editor           ICON                    "UnrealEd.ico"
+#elif UTGAME
+IDICON_UTGame           ICON                    "Envy.ico"
+IDICON_UTEditor         ICON                    "EnvyEditor.ico"
+#elif EXAMPLEGAME
+IDICON_DemoGame         ICON                    "Demogame.ico"
+IDICON_DemoEditor       ICON                    "DemoEditor.ico"
+#else
+	#error Hook up your game name here
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+//IDBM_CHECKBOX_OFF       BITMAP                  "checkbox_off.bmp"
+//IDBM_CHECKBOX_ON        BITMAP                  "checkbox_on.bmp"
+//IDBM_VIEWPORT_CFG3      BITMAP                  "bmp00003.bmp"
+//IDBM_VIEWPORT_CFG2      BITMAP                  "bmp00002.bmp"
+//IDBM_VIEWPORT_CFG1      BITMAP                  "bmp00001.bmp"
+//IDBM_VIEWPORT_CFG0      BITMAP                  "idbm_vie.bmp"
+//IDBM_VF_TOOLBAR         BITMAP                  "bmp00004.bmp"
+//IDBM_UP_ARROW           BITMAP                  "bmp00019.bmp"
+//IDBM_UNREALSCRIPT       BITMAP                  "idbm_mes.bmp"
+//IDBM_UNDO               BITMAP                  "idbm_pla.bmp"
+//IDBM_UDN_HELP           BITMAP                  "UdnContextHelp.bmp"
+//IDBM_TIPOFTHEDAY        BITMAP                  "totd.bmp"
+//IDBM_TEXTUREBROWSER     BITMAP                  "idbm_edi.bmp"
+//IDBM_SURFACEPROPERTIES  BITMAP                  "bmp00013.bmp"
+//IDBM_STOP               BITMAP                  "idbm_bac.bmp"
+//IDBM_STATICMESHBROWSER  BITMAP                  "idbm_pre.bmp"
+//IDBM_SOUNDBROWSER       BITMAP                  "bmp00012.bmp"
+//IDBM_SHOW_ON_TERRAIN    BITMAP                  "idbm_gri.bmp"
+//IDBM_REDO               BITMAP                  "bmp00017.bmp"
+//IDBM_PREFABBROWSER      BITMAP                  "bmp00022.bmp"
+//IDBM_PLAYMAP            BITMAP                  "bmp00016.bmp"
+//IDBM_NEW_PLUS           BITMAP                  "bmp00034.bmp"
+//IDBM_NEW                BITMAP                  "bmp00024.bmp"
+//IDBM_MUSICBROWSER       BITMAP                  "bmp00011.bmp"
+//IDBM_MOVE_UP            BITMAP                  "idbm_up.bmp"
+//IDBM_MOVE_DOWN          BITMAP                  "idbm_mov.bmp"
+//IDBM_MESHVIEWER         BITMAP                  "idbm_2ds.bmp"
+//IDBM_MAP_ERRORS         BITMAP                  "idbm_map.bmp"
+//IDBM_LOCK               BITMAP                  "idbm_dup.bmp"
+//IDBM_GROUPBROWSER       BITMAP                  "idbm_mus.bmp"
+//IDBM_GRID               BITMAP                  "bmp00029.bmp"
+//IDBM_FORWARD            BITMAP                  "bmp00023.bmp"
+//IDBM_FILESAVE           BITMAP                  "bmp00009.bmp"
+//IDBM_FILEOPEN           BITMAP                  "bmp00008.bmp"
+//IDBM_FILENEW            BITMAP                  "idbm_fil.bmp"
+//IDBM_EXECUTE            BITMAP                  "idbm_exe.bmp"
+//IDBM_EDITFIND           BITMAP                  "bmp00010.bmp"
+//IDBM_DUPLICATE          BITMAP                  "idbm_del.bmp"
+//IDBM_DTP_TOPLEVEL       BITMAP                  "dtp_toplevel.bmp"
+//IDBM_DTP_SPHERE         BITMAP                  "dtp_sphere.bmp"
+//IDBM_DTP_PLANE          BITMAP                  "dtp_plane.bmp"
+//IDBM_DTP_CUBE           BITMAP                  "dtp_cube.bmp"
+//IDBM_DTP_BACKDROP       BITMAP                  "dtp_backdrop.bmp"
+//IDBM_DOWN_ARROW         BITMAP                  "idbm_dow.bmp"
+//IDBM_DELETE             BITMAP                  "idbm_new.bmp"
+//IDBM_CAMSPEED3          BITMAP                  "bmp00021.bmp"
+//IDBM_CAMSPEED2          BITMAP                  "idbm_cam.bmp"
+//IDBM_CAMSPEED1          BITMAP                  "bmp00020.bmp"
+//IDBM_BUILDPATHS1        BITMAP                  "bmp00036.bmp"
+//IDBM_BUILDPATHS         BITMAP                  "bmp00014.bmp"
+//IDBM_BUILDOPTIONS       BITMAP                  "bmp00015.bmp"
+//IDBM_BUILDLIGHTING      BITMAP                  "idbm_bui.bmp"
+//IDBM_BUILDGEOM          BITMAP                  "idbm_sur.bmp"
+//IDBM_BUILDALL           BITMAP                  "idbm_buildall.bmp"
+//IDBM_BACKWARD           BITMAP                  "idbm_for.bmp"
+//IDBM_ANIMATIONVIEWER    BITMAP                  "bmp00033.bmp"
+//IDBM_AN_PLAY            BITMAP                  "idbm_an_play.bmp"
+//IDBM_AN_PAUSE           BITMAP                  "idbm_an_pause.bmp"
+//IDBM_AN_NOLOOP          BITMAP                  "idbm_an_noloop.bmp"
+//IDBM_AN_LOOP            BITMAP                  "idbm_an_loop.bmp"
+//IDBM_AN_FORWARD         BITMAP                  "idbm_an_forward.bmp"
+//IDBM_AN_END             BITMAP                  "idbm_an_end.bmp"
+//IDBM_AN_BEGIN           BITMAP                  "idbm_an_begin.bmp"
+//IDBM_AN_BACKWARD        BITMAP                  "idbm_an_backward.bmp"
+//IDBM_ACTORPROPERTIES    BITMAP                  "idbm_unr.bmp"
+//IDBM_ACTORBROWSER       BITMAP                  "idbm_tex.bmp"
+//IDBM_2DSE               BITMAP                  "bmp00018.bmp"
+//IDB_BuildChangedLighting BITMAP                  "BuildChangedLights.bmp"
+//IDB_BrowserTexture_TOOLBAR BITMAP                  "bmp00026.bmp"
+//IDB_BrowserStaticMesh_TOOLBAR BITMAP                  "browserg.bmp"
+//IDB_BrowserSound_TOOLBAR BITMAP                  "bmp00025.bmp"
+//IDB_BrowserPrefab_TOOLBAR BITMAP                  "browserm.bmp"
+//IDB_BrowserMusic_TOOLBAR BITMAP                  "browsers.bmp"
+//IDB_BrowserMesh_TOOLBAR BITMAP                  "browsert.bmp"
+//IDB_BrowserGroup_TOOLBAR BITMAP                  "bmp00028.bmp"
+//IDB_BrowserActor_TOOLBAR BITMAP                  "bmp00027.bmp"
+//IDB_BOTTOM_BAR          BITMAP                  "bmp00007.bmp"
+//IDB_BB_ZOOMCENTER_ALL   BITMAP                  "bb_grid1.bmp"
+//IDB_BB_ZOOMCENTER       BITMAP                  "bb_zoomc.bmp"
+//IDB_BB_SNAP_VTX         BITMAP                  "bb_lock1.bmp"
+//IDB_BB_ROTATE_GRID      BITMAP                  "bb_rotat.bmp"
+//IDB_BB_MAXIMIZE         BITMAP                  "bmp00006.bmp"
+//IDB_BB_LOG_WND          BITMAP                  "bb_log_w.bmp"
+//IDB_BB_LOCK             BITMAP                  "bmp00005.bmp"
+//IDB_BB_GRID             BITMAP                  "bb_vtx_s.bmp"
+//IDB_AnimationViewer_TOOLBAR BITMAP                  "bmp00032.bmp"
+//IDB_2DSE_TOOLBAR        BITMAP                  "cf_toolb.bmp"
+//7839                    BITMAP                  "bmp7839.bmp"
+//WXDISABLE_BUTTON_BITMAP BITMAP                  "disable.bmp"
+WXBITMAP_STD_COLOURS    BITMAP                  "colours.bmp"
+//IDBM_TIME_THUMB         BITMAP                  "bmp00030.bmp"
+//IDBM_TIME_RIGHT         BITMAP                  "bmp00031.bmp"
+//IDBM_TIME_LEFT          BITMAP                  "idbm_tim.bmp"
+//IDBM_TIME_BODY          BITMAP                  "bmp00035.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+/*
+IDDIALOG_Splash DIALOG  0, 0, 246, 65
+STYLE DS_SETFONT | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         101,IDC_Logo,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,
+                    229,50
+END
+*/
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+/*
+IDMENU_VIEWPORT_FRAME MENU 
+BEGIN
+    POPUP "ViewportFrame"
+    BEGIN
+        MENUITEM "Menu",                        IDMN_VF_MENU
+        MENUITEM SEPARATOR
+        MENUITEM "Realtime Preview",            IDMN_VF_REALTIME_PREVIEW
+        MENUITEM SEPARATOR
+        MENUITEM "Top",                         ID_MapOverhead
+        MENUITEM "Front",                       ID_MapXZ
+        MENUITEM "Side",                        ID_MapYZ
+        MENUITEM SEPARATOR
+        MENUITEM "Perspective",                 ID_MapWire
+        MENUITEM "Texture Usage",               ID_MapPolys
+        MENUITEM "BSP Cuts",                    ID_MapPolyCuts
+        MENUITEM "Textured",                    ID_MapPlainTex
+        MENUITEM "Lighting",                    ID_MapLighting
+        MENUITEM "Dynamic Lighting",            ID_MapDynLight
+        MENUITEM "Zones/Portals",               ID_MapZones
+        MENUITEM "Depth Complexity",            ID_DepthComplexity
+        MENUITEM SEPARATOR
+        MENUITEM "Lock to Selected Actor?",     ID_LockToSelectedActor
+        MENUITEM "Show Large Vertices?",        ID_ShowLargeVertices
+    END
+END
+
+IDMENU_VF_CONTEXT MENU 
+BEGIN
+    POPUP "Context"
+    BEGIN
+        POPUP "&Mode"
+        BEGIN
+            MENUITEM "Top",                         ID_MapOverhead
+            MENUITEM "Front",                       ID_MapXZ
+            MENUITEM "Side",                        ID_MapYZ
+            MENUITEM SEPARATOR
+            MENUITEM "Perspective",                 ID_MapWire
+            MENUITEM "Texture Usage",               ID_MapPolys
+            MENUITEM "BSP Cuts",                    ID_MapPolyCuts
+            MENUITEM "Textured",                    ID_MapPlainTex
+            MENUITEM "Lighting",                    ID_MapLighting
+            MENUITEM "Dynamic Lighting",            ID_MapDynLight
+            MENUITEM "Zones/Portals",               ID_MapZones
+            MENUITEM "Depth Complexity",            ID_DepthComplexity
+        END
+        POPUP "&View"
+        BEGIN
+            MENUITEM "Show Active &Brush\tB",       ID_ShowBrush
+            MENUITEM "Show &Static Meshes\tW",      ID_ShowStaticMeshes
+            MENUITEM "Show &Moving Brushes",        ID_ShowMovingBrushes
+            MENUITEM "Show &Volumes\tO",            ID_ShowVolumes
+            MENUITEM "Show Bac&kdrop\tK",           ID_ShowBackdrop
+            MENUITEM "Show &Coordinates",           ID_ShowCoords
+            MENUITEM "Show Paths",                  ID_ShowPaths
+            MENUITEM "Show Event Lines\tE",         ID_ShowEventLines
+            MENUITEM "Show Selection Highlight\tS", ID_ShowSelectionHighlight
+
+            MENUITEM "Show &Terrain\tT",            ID_ShowTerrain
+            MENUITEM "Show Distance &Fog\tF",       ID_ShowDistanceFog
+            MENUITEM "Show Fluid Surfaces",         ID_ShowFluidSurfaces
+            MENUITEM "Show Karma Primitives",       ID_ShowKarmaPrimitives
+        END
+        POPUP "&Actors"
+        BEGIN
+            MENUITEM "&Full Actor View",            ID_ActorsShow
+            MENUITEM "I&nformation",                ID_ActorInfo
+            MENUITEM "&Icon View",                  ID_ActorsIcons
+            MENUITEM "&Radii View",                 ID_ActorsRadii
+            MENUITEM "&Hide Actors",                ID_ActorsHide
+        END
+        POPUP "&Window"
+        BEGIN
+            MENUITEM "16-Bit Color",                ID_Color16Bit
+            MENUITEM "32-Bit Color",                ID_Color32Bit
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Lock to Selected Actor?",     ID_LockToSelectedActor
+        MENUITEM "Show Large Vertices?",        ID_ShowLargeVertices
+    END
+END
+
+IDMENU_Terrains_Context MENU 
+BEGIN
+    POPUP "Context"
+    BEGIN
+        MENUITEM "&Convert to 16-bit",          IDMN_TL_CONVERT_TO_16BIT
+    END
+END
+
+IDMENU_TerrainLayer_Context MENU 
+BEGIN
+    POPUP "Context"
+    BEGIN
+        MENUITEM "&Set Texture from Current",   IDMN_TL_SET_TEXTURE_FROM_CURRENT
+
+        MENUITEM "&Set Alpha from Current",     IDMN_TL_SET_ALPHA_FROM_CURRENT
+
+        MENUITEM "&Toggle Grid",                IDMN_TL_TOGGLE_GRID
+    END
+END
+
+IDMENU_TerrainDecoLayer_Context MENU 
+BEGIN
+    POPUP "Context"
+    BEGIN
+        MENUITEM "&Set Density Texture from Current", 
+                                                IDMN_TDL_SET_DENSITY_FROM_CURRENT
+
+        MENUITEM "&Set Color Texure from Current", 
+                                                IDMN_TDL_SET_COLOR_FROM_CURRENT
+
+        MENUITEM "&Set Scale Texture from Current", 
+                                                IDMN_TDL_SET_SCALE_FROM_CURRENT
+
+        MENUITEM "&Set Static Mesh from Current", 
+                                                IDMN_TDL_SET_STATICMESH_FROM_CURRENT
+
+        MENUITEM "&Toggle Show On Terrain",     IDMN_TDL_TOGGLE_SHOW_ON_TERRAIN
+
+    END
+END
+
+IDMENU_ShowOnTerrain MENU 
+BEGIN
+    POPUP "Context"
+    BEGIN
+        MENUITEM "&Show All Layers on Terrain", IDMN_SOT_SHOW_ALL
+        MENUITEM "&Hide All Layers",            IDMN_SOT_HIDE_ALL
+        MENUITEM SEPARATOR
+    END
+END
+
+IDMENU_ShowGrid MENU 
+BEGIN
+    POPUP "Context"
+    BEGIN
+        MENUITEM "&Show Grid on All Layer",     IDMN_SG_SHOW_ALL
+        MENUITEM "&Hide Grid on All Layers",    IDMN_SG_HIDE_ALL
+        MENUITEM SEPARATOR
+    END
+END
+
+IDMENU_ModeSpecific MENU 
+BEGIN
+    POPUP "ActorPopup"
+    BEGIN
+        MENUITEM "IDMENU_ModeSpecific_CreateBrush", 
+                                                IDMENU_ModeSpecific_CreateBrush
+
+    END
+END
+
+IDMENU_MainMenu MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New...\tCtrl+N",             ID_FileNew
+        MENUITEM "&Open...\tCtrl+O",            ID_FileOpen
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tCtrl+L",               ID_FileSave
+        MENUITEM "Save &As...",                 ID_FileSaveAs
+        MENUITEM SEPARATOR
+        MENUITEM "&Import...",                  ID_FILE_IMPORT
+        MENUITEM "&Export...",                  ID_FILE_EXPORT
+        MENUITEM SEPARATOR
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EditUndo
+        MENUITEM "&Redo\tCtrl+Y",               ID_EditRedo
+        MENUITEM SEPARATOR
+        MENUITEM "&Search for Actors...",       IDMN_EDIT_SEARCH
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EditCut
+        MENUITEM "&Copy\tCtrl+C",               ID_EditCopy
+        MENUITEM "&Paste\tCtrl+V",              ID_EditPaste
+        MENUITEM SEPARATOR
+        MENUITEM "D&uplicate\tCtrl+W",          ID_EditDuplicate
+        MENUITEM "&Delete\tDel",                ID_EditDelete
+        MENUITEM SEPARATOR
+        MENUITEM "Select &None\tShift+Z",       ID_EditSelectNone
+        MENUITEM "Select A&ll Actors\tShift+A", ID_EditSelectAllActors
+        MENUITEM "Select A&ll Surfaces\tShift+S", ID_EditSelectAllSurfs
+        POPUP "&Select Surfaces"
+        BEGIN
+            MENUITEM "Matching &Groups\tShift+G",   ID_SurfPopupSelectMatchingGroups
+
+            MENUITEM "Matching &Items\tShift+I",    ID_SurfPopupSelectMatchingItems
+
+            MENUITEM "Matching &Brush\tShift+B",    ID_SurfPopupSelectMatchingBrush
+
+            MENUITEM "Matching &Texture\tShift+T",  ID_SurfPopupSelectMatchingTexture
+
+            MENUITEM SEPARATOR
+            MENUITEM "All Ad&jacents\tShift+J",     ID_SurfPopupSelectAllAdjacents
+
+            MENUITEM "Adjacent &Coplanars\tShift+C", 
+                                                    ID_SurfPopupSelectAdjacentCoplanars
+
+            MENUITEM "Adjacent &Walls\tShift+W",    ID_SurfPopupSelectAdjacentWalls
+
+            MENUITEM "Adjacent &Floors/Ceilings\tShift+F", 
+                                                    ID_SurfPopupSelectAdjacentFloors
+
+            MENUITEM "Adjacent &Slants\tShift+S",   ID_SurfPopupSelectAdjacentSlants
+
+            MENUITEM SEPARATOR
+            MENUITEM "Reverse\tShift+Q",            ID_SurfPopupSelectReverse
+
+            MENUITEM SEPARATOR
+            MENUITEM "&Memorize Set\tShift+M",      ID_SurfPopupMemorize
+            MENUITEM "&Recall Memory\tShift+R",     ID_SurfPopupRecall
+            MENUITEM "&Or With Memory\tShift+O",    ID_SurfPopupOr
+            MENUITEM "&And With Memory\tShift+U",   ID_SurfPopupAnd
+            MENUITEM "&Xor With Memory\tShift+X",   ID_SurfPopupXor
+        END
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Log",                        ID_ToolsLog
+        MENUITEM SEPARATOR
+        POPUP "&Rendering Emulation"
+        BEGIN
+            MENUITEM "None",                        IDMN_EMU_NONE
+            MENUITEM "GeForce1",                    IDMN_EMU_GF1
+            MENUITEM "GeForce2",                    IDMN_EMU_GF2
+            MENUITEM "XBox",                        IDMN_EMU_XBOX
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Show &Actor Class Browser",   ID_BrowserActor
+        MENUITEM "Show A&nimation Browser",     ID_AnimationViewer
+        MENUITEM "Show &Group Browser",         ID_BrowserGroup
+        MENUITEM "Show &Master Browser",        ID_BrowserMaster
+        MENUITEM "Show Scri&pt Editor",         IDMN_CODE_FRAME
+        MENUITEM SEPARATOR
+        MENUITEM "Actor Properties\tF4",        ID_ViewActorProp
+        MENUITEM "Surface Properties\tF5",      ID_ViewSurfaceProp
+        MENUITEM "Level Properties\tF6",        ID_ViewLevelProp
+        MENUITEM "Advanced Options",            40067
+        MENUITEM SEPARATOR
+        POPUP "&Viewports"
+        BEGIN
+            MENUITEM "&Floating",                   IDMN_VIEWPORT_FLOATING
+            MENUITEM "Fi&xed",                      IDMN_VIEWPORT_FIXED
+            MENUITEM SEPARATOR
+            MENUITEM "New Viewport",                ID_ViewNewFree
+            MENUITEM "Configure...",                IDMN_VIEWPORT_CONFIG
+            MENUITEM "C&lose All",                  IDMN_VIEWPORT_CLOSEALL
+        END
+        POPUP "Background Image"
+        BEGIN
+            MENUITEM "&Open...",                    IDMN_LOAD_BACK_IMAGE
+            MENUITEM "&Clear",                      IDMN_CLEAR_BACK_IMAGE
+            MENUITEM SEPARATOR
+            MENUITEM "&Center",                     IDMN_BI_CENTER
+            MENUITEM "&Tile",                       IDMN_BI_TILE
+            MENUITEM "&Stretch",                    IDMN_BI_STRETCH
+        END
+    END
+    POPUP "&Brush"
+    BEGIN
+        POPUP "&Reset"
+        BEGIN
+            MENUITEM "&Move To Origin",             IDMENU_ActorPopupResetOrigin
+
+            MENUITEM "Reset &Pivot",                IDMENU_ActorPopupResetPivot
+
+            MENUITEM "Reset &Rotation",             IDMENU_ActorPopupResetRotation
+
+            MENUITEM "Reset &Scaling",              IDMENU_ActorPopupResetScaling
+
+            MENUITEM "&Reset All",                  IDMENU_ActorPopupResetAll
+
+        END
+        MENUITEM "&Scale...",                   ID_BrushScale
+        MENUITEM SEPARATOR
+        MENUITEM "&Add\tCtrl+A",                ID_BrushAdd
+        MENUITEM "&Subtract\tCtrl+S",           ID_BrushSubtract
+        MENUITEM "&Intersect\tCtrl+N",          ID_BrushIntersect
+        MENUITEM "&Deintersect\tCtrl+D",        ID_BrushDeintersect
+        MENUITEM SEPARATOR
+        MENUITEM "&Add Mover",                  ID_BrushAddMover
+        MENUITEM "&Add Special...",             ID_BrushAddSpecial
+        MENUITEM SEPARATOR
+        MENUITEM "&Open Brush\tCtrl+B",         ID_BrushOpen
+        MENUITEM "&Save Brush As...",           ID_BrushSaveAs
+        MENUITEM SEPARATOR
+        MENUITEM "&Import...",                  ID_BRUSH_IMPORT
+        MENUITEM "&Export...",                  ID_BRUSH_EXPORT
+    END
+    POPUP "B&uild"
+    BEGIN
+        MENUITEM "&Play Level\tCtrl+P",         ID_BuildPlay
+        MENUITEM SEPARATOR
+        MENUITEM "Rebuild &Geometry Only",      ID_BuildGeometry
+        MENUITEM "Rebuild Lighting Only",       ID_BuildLighting
+        MENUITEM "Rebuild Changed Lighting Only", ID_BuildChangedLighting
+        MENUITEM "Rebuild AI Paths",            ID_BuildPaths
+        MENUITEM "&Build All",                  ID_BuildAll
+        MENUITEM SEPARATOR
+        MENUITEM "Build Options...",            ID_BuildOptions
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&2D Shape Editor",            ID_Tools2DEditor
+        MENUITEM "&Scale Lights...",            IDMN_EDIT_SCALE_LIGHTS
+        MENUITEM "&Check Map for Errors",       IDMN_TOOL_CHECK_ERRORS
+        MENUITEM "&Scale Map...",               ID_MapScale
+        MENUITEM "&Remove Existing Particles",  ID_ResetParticleEmitters
+        MENUITEM "&Rotate Actors...",           ID_RotateActors
+        MENUITEM "Review Paths",                ID_ReviewPaths
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Tip of the Day...",          IDMN_HELP_TOTD
+        MENUITEM "&Context Help...",            IDMN_HELP_UDN_CONTEXT
+        MENUITEM SEPARATOR
+        MENUITEM "&Unreal Developer Network",   IDMN_HELP_UDN
+    END
+END
+
+IDMENU_BrowserMaster MENU 
+BEGIN
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Dock",                       IDMN_MB_DOCK
+    END
+END
+
+IDMENU_BrowserGroup MENU 
+BEGIN
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&New Group",                  IDMN_GB_NEW_GROUP
+        MENUITEM "&Rename Group",               IDMN_GB_RENAME_GROUP
+        MENUITEM "&Delete Group",               IDMN_GB_DELETE_GROUP
+        MENUITEM SEPARATOR
+        MENUITEM "&Add Selected Actors to Group", IDMN_GB_ADD_TO_GROUP
+        MENUITEM "&Add Delete Selected Actors from Group", 
+                                                IDMN_GB_DELETE_FROM_GROUP
+        MENUITEM SEPARATOR
+        MENUITEM "&Select Actors",              IDMN_GB_SELECT
+        MENUITEM "&Deselect Actors",            IDMN_GB_DESELECT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Docked",                     IDMN_MB_DOCK
+        MENUITEM SEPARATOR
+        MENUITEM "&Refresh",                    IDMN_GB_REFRESH
+    END
+END
+
+IDMENU_BrowserActor_Context MENU 
+BEGIN
+    POPUP "Context"
+    BEGIN
+        MENUITEM "&Delete me",                  IDMN_GB_NEW_GROUP
+    END
+END
+
+IDMENU_BrowserActor MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open Package...",            IDMN_AB_FileOpen
+        MENUITEM "&Save Selected Packages",     IDMN_AB_FileSave
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Docked",                     IDMN_MB_DOCK
+    END
+END
+
+IDMENU_2DShapeEditor_Context MENU 
+BEGIN
+    POPUP "Context"
+    BEGIN
+        MENUITEM "Set &Origin",                 IDMN_2DSEC_SET_ORIGIN
+        MENUITEM SEPARATOR
+        MENUITEM "&Split Side\tCtrl+I",         IDMN_2DSE_SPLIT_SIDE
+        MENUITEM "&Delete\tDel",                IDMN_2DSE_DELETE
+        MENUITEM SEPARATOR
+        POPUP "&Grid"
+        BEGIN
+            MENUITEM "1",                           IDMN_GRID_1
+            MENUITEM "2",                           IDMN_GRID_2
+            MENUITEM "4",                           IDMN_GRID_4
+            MENUITEM "8",                           IDMN_GRID_8
+            MENUITEM "16",                          IDMN_GRID_16
+            MENUITEM "32",                          IDMN_GRID_32
+            MENUITEM "64",                          IDMN_GRID_64
+        END
+        POPUP "Se&gment"
+        BEGIN
+            MENUITEM "&Linear",                     IDMN_SEGMENT_LINEAR
+            MENUITEM "&Bezier",                     IDMN_SEGMENT_BEZIER
+            MENUITEM SEPARATOR
+            POPUP "Detail Level"
+            BEGIN
+                MENUITEM "1",                           IDMN_DETAIL_1
+                MENUITEM "2",                           IDMN_DETAIL_2
+                MENUITEM "3",                           IDMN_DETAIL_3
+                MENUITEM "4",                           IDMN_DETAIL_4
+                MENUITEM "5",                           IDMN_DETAIL_5
+                MENUITEM "10",                          IDMN_DETAIL_10
+                MENUITEM "15",                          IDMN_DETAIL_15
+                MENUITEM "20",                          IDMN_DETAIL_20
+                MENUITEM "&Custom...",                  IDMN_DETAIL_CUSTOM
+            END
+        END
+    END
+END
+
+IDMENU_2DShapeEditor MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New",                        IDMN_2DSE_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "&Open...",                    IDMN_2DSE_FileOpen
+        MENUITEM "&Save",                       IDMN_2DSE_FileSave
+        MENUITEM "Save &As...",                 IDMN_2DSE_FileSaveAs
+        MENUITEM SEPARATOR
+        POPUP "&Image"
+        BEGIN
+            MENUITEM "&Open From Disk...",          IDMN_2DSE_OPEN_IMAGE
+            MENUITEM "&Get From Current Texture",   IDMN_2DSE_GET_IMAGE
+            MENUITEM SEPARATOR
+            MENUITEM "&Delete",                     IDMN_2DSE_DELETE_IMAGE
+        END
+        MENUITEM SEPARATOR
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Insert New Shape",           IDMN_2DSE_NEW_SHAPE
+        MENUITEM "&Split Side\tCtrl+I",         IDMN_2DSE_SPLIT_SIDE
+        MENUITEM "&Delete\tDel",                IDMN_2DSE_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "Scale &Up",                   IDMN_2DSE_SCALE_UP
+        MENUITEM "Scale &Down",                 IDMN_2DSE_SCALE_DOWN
+        MENUITEM SEPARATOR
+        MENUITEM "Rotate &45",                  IDMN_2DSE_ROTATE45
+        MENUITEM "Rotate &90",                  IDMN_2DSE_ROTATE90
+        MENUITEM SEPARATOR
+        MENUITEM "Flip &Horizontally",          IDMN_2DSE_FLIP_HORIZ
+        MENUITEM "Flip &Vertically",            IDMN_2DSE_FLIP_VERT
+        MENUITEM SEPARATOR
+        POPUP "&Grid"
+        BEGIN
+            MENUITEM "1",                           IDMN_GRID_1
+            MENUITEM "2",                           IDMN_GRID_2
+            MENUITEM "4",                           IDMN_GRID_4
+            MENUITEM "8",                           IDMN_GRID_8
+            MENUITEM "16",                          IDMN_GRID_16
+            MENUITEM "32",                          IDMN_GRID_32
+            MENUITEM "64",                          IDMN_GRID_64
+        END
+        POPUP "Se&gment"
+        BEGIN
+            MENUITEM "&Linear",                     IDMN_SEGMENT_LINEAR
+            MENUITEM "&Bezier",                     IDMN_SEGMENT_BEZIER
+            MENUITEM SEPARATOR
+            POPUP "Detail Level"
+            BEGIN
+                MENUITEM "1",                           IDMN_DETAIL_1
+                MENUITEM "2",                           IDMN_DETAIL_2
+                MENUITEM "3",                           IDMN_DETAIL_3
+                MENUITEM "4",                           IDMN_DETAIL_4
+                MENUITEM "5",                           IDMN_DETAIL_5
+                MENUITEM "10",                          IDMN_DETAIL_10
+                MENUITEM "15",                          IDMN_DETAIL_15
+                MENUITEM "20",                          IDMN_DETAIL_20
+                MENUITEM "&Custom...",                  IDMN_DETAIL_CUSTOM
+            END
+        END
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Zoom &In",                    IDMN_2DSE_ZOOM_IN
+        MENUITEM "Zoom &Out",                   IDMN_2DSE_ZOOM_OUT
+        MENUITEM SEPARATOR
+        MENUITEM "&Move Camera To Origin",      IDMN_2DSE_MOVE_TO_ORIGIN
+    END
+    POPUP "&Process"
+    BEGIN
+        MENUITEM "&Sheet",                      IDMN_2DSE_PROCESS_SHEET
+        MENUITEM "&Revolve...",                 IDMN_2DSE_PROCESS_REVOLVE
+        MENUITEM "&Extrude...",                 IDMN_2DSE_PROCESS_EXTRUDE
+        MENUITEM "Extrude to &Point...",        IDMN_2DSE_PROCESS_EXTRUDETOPOINT
+
+        MENUITEM "Extrude to Bevel...",         IDMN_2DSE_PROCESS_EXTRUDETOBEVEL
+
+    END
+END
+
+40650 MENU 
+BEGIN
+    POPUP "Context"
+    BEGIN
+        MENUITEM "Properties",                  IDMN_AB_SKELMESHPROPS
+        MENUITEM SEPARATOR
+        MENUITEM "Create New Physics Asset From..", IDMN_AB_NEWPHYSASSET
+    END
+END
+
+IDMENU_BROWSERFACIALANIM_CONTEXT MENU 
+BEGIN
+    POPUP "Context"
+    BEGIN
+        MENUITEM "&New",                        IDMN_FAB_NEW
+        MENUITEM "&Import",                     IDMN_FAB_IMPORT
+        MENUITEM SEPARATOR
+        MENUITEM "&Update",                     IDMN_FAB_UPDATE
+        MENUITEM "&Quick Update",               IDMN_FAB_QUICK_UPDATE
+        MENUITEM "&Rename",                     IDMN_FAB_RENAME
+        MENUITEM "&Delete",                     IDMN_FAB_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "I&nfo",                       IDMN_FAB_INFO
+    END
+END
+*/
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDCUR_NODROP            CURSOR                  "nodrop.cur"
+IDCUR_MOVE              CURSOR                  "arrow.cur"
+IDCUR_COPY              CURSOR                  "arrowcop.cur"
+WXCURSOR_CROSS          CURSOR                  "crosshai.cur"
+
+//IDC_ZoomOut             CURSOR                  "zoomout.cur"
+//IDC_ZoomIn              CURSOR                  "zoomin.cur"
+//IDC_UDN_HelpBig         CURSOR                  "cur00001.cur"
+//IDC_UDN_Help            CURSOR                  "udn_help.cur"
+//IDC_SplitWE1            CURSOR                  "splitall.cur"
+//IDC_SplitWE             CURSOR                  "splitwe.cur"
+//IDC_SplitNS             CURSOR                  "splitns.cur"
+//IDC_NoDrop              CURSOR                  "nodrop.cur"
+//IDC_LittlePointer       CURSOR                  "littlepo.cur"
+//IDC_LittleArrows        CURSOR                  "littlear.cur"
+//IDC_HandGrab            CURSOR                  "hand1.cur"
+//IDC_Hand                CURSOR                  "hand.cur"
+//IDC_Draw                CURSOR                  "draw.cur"
+//IDC_DragItem            CURSOR                  "dragitem.cur"
+//IDC_Crosshair           CURSOR                  "crosshai.cur"
+//IDC_Add                 CURSOR                  "add.cur"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+//#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+//#endif    // not APSTUDIO_INVOKED
+

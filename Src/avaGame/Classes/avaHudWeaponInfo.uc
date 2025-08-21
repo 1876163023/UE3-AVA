@@ -1,0 +1,2 @@
+class avaHudWeaponInfo extends avaHudObject;
+

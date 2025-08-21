@@ -1,0 +1,4 @@
+//ava.dev/Client/UnrealEngine3/Binaries/LTCG-avaGame.exe
+//ava.dev/Client/UnrealEngine3/avaGame/ScriptFinalRelease/*.u
+
+

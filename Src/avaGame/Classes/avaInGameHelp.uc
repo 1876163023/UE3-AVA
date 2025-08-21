@@ -1,0 +1,9 @@
+class avaInGameHelp extends object;
+
+static function	AddHelp( PlayerController P, coerce string str )
+{
+	// Option 에서 InGameHelp 를 보여줄지 안보여줄지를 Check 한다...
+	if ( avaGameReplicationInfo( P.WorldInfo.GRI ).UseInGameHelp == false )	return;	// Option 에서 끈 경우...
+	if ( avaPlayerReplicationInfo( P.PlayerReplicationInfo ).Level > 2 )	return;	// 계급제한...
+	avaHUD(P.MyHUD).AddInGameHelp( str );
+}

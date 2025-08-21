@@ -1,0 +1,11 @@
+/**
+ * Copyright 2004-2005 Epic Games, Inc. All Rights Reserved.
+ */
+class MaterialExpressionFlipBookSample extends MaterialExpressionTextureSample
+	native(Material);
+
+cpptext
+{
+	virtual INT Compile(FMaterialCompiler* Compiler);
+	virtual FString GetCaption() const;
+}

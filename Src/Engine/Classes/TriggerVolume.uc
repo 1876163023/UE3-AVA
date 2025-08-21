@@ -1,0 +1,24 @@
+/**
+ * Copyright 2004-2006 Epic Games, Inc. All Rights Reserved.
+ */
+class TriggerVolume extends Volume
+	native
+	placeable;
+
+simulated function bool StopsProjectile(Projectile P)
+{
+	return false;
+}
+
+defaultproperties
+{
+	bColored=true
+	BrushColor=(R=100,G=255,B=100,A=255)
+
+	bCollideActors=true
+	bProjTarget=true
+	SupportedEvents.Empty
+	SupportedEvents(0)=class'SeqEvent_Touch'
+	SupportedEvents(1)=class'SeqEvent_UnTouch'
+	SupportedEvents(2)=class'SeqEvent_TakeDamage'
+}

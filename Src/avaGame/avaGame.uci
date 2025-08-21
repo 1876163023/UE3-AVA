@@ -1,0 +1,108 @@
+/**
+ * Copyright ?2006 Redduck Studio, Inc. All Rights Reserved.
+ */
+ 
+`define UU2METER				0.01875
+
+/*
+	means 20 meter
+*/
+`define	AUTORADIOMSG_DISTANCE	1067
+
+
+
+`define	DEADVIEWTARGETCHANGETIME	5.0
+
+/*
+  한 게임에서 개인이 낼 수 있는 Max Score
+*/
+`define MAX_SCORE				200
+
+`define	MAX_ATTACKSCORE			50
+`define MAX_DEFENCESCORE		50
+`define MAX_LEADERSCORE			50
+`define MAX_TACTICSSCORE		50
+
+`define MAX_TEAMATTACKSCORE		100
+`define MAX_TEAMDEFENCESCORE	100
+`define MAX_TEAMLEADERSCORE		100
+`define MAX_TEAMTACTICSSCORE	100
+
+/*
+	분대장에 의해서 Target 되었을때의 지속시간...
+*/
+`define	MAX_TARGETTIME			10	
+
+
+/*
+EU, 
+NRF 
+*/
+`define MAX_TEAM				2		
+
+/*
+	Team Slot Max Count...
+	
+	EU	: 0 ~ 11
+	NRF : 12 ~ 23
+*/
+`define MAX_TEAM_SLOT			12
+
+
+/*
+PointMan, 
+RifleMan, 
+Sniper
+*/						
+`define MAX_PLAYER_CLASS		3		
+
+/*
+WEAPON_KNIFE
+WEAPON_PISTOL
+WEAPON_GRENADE
+WEAPON_SMG
+WEAPON_RIFLE
+WEAPON_SNIPER
+WEAPON_SHOTGUN
+WEAPON_ETC
+WEAPON_RPG
+WEAPON_MACHINEGUN
+*/
+`define MAX_WEAPON_TYPE			10
+										
+/*
+SI_Generic,
+SI_Head,
+SI_Stomach,
+SI_Chest,
+SI_LeftArm,
+SI_RightArm,
+SI_LeftLeg,
+SI_RightLeg,
+*/
+`define MAX_SHOT_INFO			8
+
+/*
+Weapon 하나당 가질 수 있는 Modifier 의 갯수
+*/
+`define MAX_WEAPON_MODIFIER		10
+
+
+/*
+Player 가 가질 수 있는 최대 Weapon 의 갯수
+*/
+`define MAX_PLAYER_WEAPON		8
+
+
+/*
+Player 가 가질 수 있는 Player Modifier 의 갯수
+*/
+`define MAX_PLAYER_MODIFIER		25
+
+`define GSTAR_2006				0
+
+`if(`isdefined(FINAL_RELEASE))
+`define devexec 
+`else
+`define devexec exec 
+`endif

@@ -1,0 +1,6 @@
+//ava.dev/Client/UnrealEngine3/avaGame/Content/RefShaderCache-PC-D3D.upk
+//ava.dev/Client/UnrealEngine3/avaGame/Content/RefShaderCache-PC-D3D-SM2.upk
+//ava.dev/Client/UnrealEngine3/avaGame/Content/RefShaderCache-PC-D3D-SM2P.upk
+//ava.dev/Client/UnrealEngine3/avaGame/Content/GameRefSC-PC-D3D.upk
+//ava.dev/Client/UnrealEngine3/avaGame/Content/GameRefSC-PC-D3D-SM2.upk
+//ava.dev/Client/UnrealEngine3/avaGame/Content/GameRefSC-PC-D3D-SM2P.upk

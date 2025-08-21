@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="ks_c_5601-1987"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="vphysics"
+	ProjectGUID="{13CD0E33-B1DD-4EED-AEB2-F67BD5C0D57E}"
+	SccProjectName=""
+	SccAuxPath=""
+	SccLocalPath=""
+	SccProvider="">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory=".\Debug"
+			IntermediateDirectory=".\Debug"
+			ConfigurationType="2"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				OptimizeForProcessor="2"
+				AdditionalIncludeDirectories="..\ivp\IVP_INTERN,..\ivp\IVP_COLLISION,..\ivp\IVP_PHYSICS,..\ivp\IVP_SURFACE_MANAGER,..\ivp\IVP_UTILITY,..\ivp\IVP_CONTROLLER,..\ivp\IVP_COMPACT_BUILDER,..\ivp\havana\havok,..\ivp\havana,..\public"
+				PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="1"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderFile=".\Debug/vphysics.pch"
+				AssemblerListingLocation=".\Debug/"
+				ObjectFile=".\Debug/"
+				ProgramDataBaseFileName=".\Debug/"
+				BrowseInformation="1"
+				WarningLevel="4"
+				SuppressStartupBanner="TRUE"
+				DebugInformationFormat="4"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"
+				Description="Copying to Game Directory"
+				CommandLine="if exist ..\..\bin\vphysics.dll attrib -r ..\..\bin\vphysics.dll
+copy &quot;$(TargetPath)&quot; ..\..\bin\vphysics.dll
+if exist &quot;$(TargetDir)&quot;vphysics.map copy &quot;$(TargetDir)&quot;vphysics.map ..\..\bin\vphysics.map
+"
+				Outputs="..\..\bin\vphysics.dll"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="odbc32.lib odbccp32.lib"
+				OutputFile=".\Debug/vphysics.dll"
+				LinkIncremental="1"
+				SuppressStartupBanner="TRUE"
+				AdditionalLibraryDirectories="..\lib\public,..\lib\common,..\ivp\havana\hk_library\win32\release\,..\ivp\ivp_library\win32_release"
+				IgnoreDefaultLibraryNames="libc.lib"
+				GenerateDebugInformation="TRUE"
+				ProgramDatabaseFile=".\Debug/vphysics.pdb"
+				BaseAddress="0x26000000"
+				ImportLibrary=".\Debug/vphysics.lib"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="_DEBUG"
+				MkTypLibCompatible="TRUE"
+				SuppressStartupBanner="TRUE"
+				TargetEnvironment="1"
+				TypeLibraryName=".\Debug/vphysics.tlb"
+				HeaderFileName=""/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1033"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory=".\Release"
+			IntermediateDirectory=".\Release"
+			ConfigurationType="2"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="2"
+				InlineFunctionExpansion="1"
+				OptimizeForProcessor="2"
+				AdditionalIncludeDirectories="..\ivp\IVP_INTERN,..\ivp\IVP_COLLISION,..\ivp\IVP_PHYSICS,..\ivp\IVP_SURFACE_MANAGER,..\ivp\IVP_UTILITY,..\ivp\IVP_CONTROLLER,..\ivp\IVP_COMPACT_BUILDER,..\ivp\havana\havok,..\ivp\havana,..\public"
+				PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP"
+				StringPooling="TRUE"
+				RuntimeLibrary="0"
+				EnableFunctionLevelLinking="TRUE"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderFile=".\Release/vphysics.pch"
+				AssemblerListingLocation=".\Release/"
+				ObjectFile=".\Release/"
+				ProgramDataBaseFileName=".\Release/"
+				BrowseInformation="1"
+				WarningLevel="4"
+				SuppressStartupBanner="TRUE"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"
+				Description="Copying to Game Directory"
+				CommandLine="if exist ..\..\bin\vphysics.dll attrib -r ..\..\bin\vphysics.dll
+copy &quot;$(TargetPath)&quot; ..\..\bin\vphysics.dll
+if exist &quot;$(TargetDir)&quot;vphysics.map copy &quot;$(TargetDir)&quot;vphysics.map ..\..\bin\vphysics.map
+"
+				Outputs="..\..\bin\vphysics.dll"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="odbc32.lib odbccp32.lib"
+				OutputFile=".\Release/vphysics.dll"
+				LinkIncremental="1"
+				SuppressStartupBanner="TRUE"
+				AdditionalLibraryDirectories="..\lib\public,..\lib\common,..\ivp\havana\hk_library\win32\release\,..\ivp\ivp_library\win32_release"
+				IgnoreDefaultLibraryNames="libc.lib"
+				ProgramDatabaseFile=".\Release/vphysics.pdb"
+				GenerateMapFile="TRUE"
+				MapFileName=".\Release/vphysics.map"
+				BaseAddress="0x26000000"
+				ImportLibrary=".\Release/vphysics.lib"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="NDEBUG"
+				MkTypLibCompatible="TRUE"
+				SuppressStartupBanner="TRUE"
+				TargetEnvironment="1"
+				TypeLibraryName=".\Release/vphysics.tlb"
+				HeaderFileName=""/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1033"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			<File
+				RelativePath="..\public\characterset.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="convert.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\public\filesystem_helpers.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Public\interface.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="main.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Public\Mathlib.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\public\tier0\memoverride.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="physics_airboat.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="physics_collide.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="physics_constraint.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="physics_controller_raycast_vehicle.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="physics_environment.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="physics_fluid.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="physics_material.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="physics_motioncontroller.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="physics_object.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="physics_shadow.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="physics_spring.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="physics_vehicle.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="trace.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\Public\utlsymbol.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="vcollide_parse.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="vphysics_saverestore.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="DEBUG;_DEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="NDEBUG;_WIN32;WIN32;_MBCS;_USRDLL;VPHYSICS_EXPORTS;ENABLE_IVP_MOPP;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead;_WINDOWS;HAVANA_CONSTRAINTS;HAVOK_MOPP;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl">
+			<File
+				RelativePath="..\public\vphysics\constraints.h">
+			</File>
+			<File
+				RelativePath="convert.h">
+			</File>
+			<File
+				RelativePath="..\Public\datamap.h">
+			</File>
+			<File
+				RelativePath="..\public\filesystem_helpers.h">
+			</File>
+			<File
+				RelativePath="linear_solver.h">
+			</File>
+			<File
+				RelativePath="physics_airboat.h">
+			</File>
+			<File
+				RelativePath="physics_constraint.h">
+			</File>
+			<File
+				RelativePath="physics_controller_raycast_vehicle.h">
+			</File>
+			<File
+				RelativePath="physics_environment.h">
+			</File>
+			<File
+				RelativePath="physics_fluid.h">
+			</File>
+			<File
+				RelativePath="physics_material.h">
+			</File>
+			<File
+				RelativePath="physics_motioncontroller.h">
+			</File>
+			<File
+				RelativePath="physics_object.h">
+			</File>
+			<File
+				RelativePath="physics_shadow.h">
+			</File>
+			<File
+				RelativePath="physics_spring.h">
+			</File>
+			<File
+				RelativePath="physics_trace.h">
+			</File>
+			<File
+				RelativePath="physics_vehicle.h">
+			</File>
+			<File
+				RelativePath="..\Public\vcollide.h">
+			</File>
+			<File
+				RelativePath="..\Public\vcollide_parse.h">
+			</File>
+			<File
+				RelativePath="vcollide_parse_private.h">
+			</File>
+			<File
+				RelativePath="..\public\vphysics\vehicles.h">
+			</File>
+			<File
+				RelativePath="..\Public\vphysics_interface.h">
+			</File>
+			<File
+				RelativePath="vphysics_internal.h">
+			</File>
+			<File
+				RelativePath="vphysics_saverestore.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe">
+		</Filter>
+		<File
+			RelativePath="..\lib\common\havana_constraints.lib">
+			<FileConfiguration
+				Name="Debug|Win32"
+				ExcludedFromBuild="TRUE">
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="Copying to Game Directory"
+					CommandLine="if exist ..\..\bin\vphysics.dll attrib -r ..\..\bin\vphysics.dll
+copy &quot;$(TargetPath)&quot; ..\..\bin\vphysics.dll
+if exist &quot;$(TargetDir)&quot;vphysics.map copy &quot;$(TargetDir)&quot;vphysics.map ..\..\bin\vphysics.map
+"/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32"
+				ExcludedFromBuild="TRUE">
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="Copying to Game Directory"
+					CommandLine="if exist ..\..\bin\vphysics.dll attrib -r ..\..\bin\vphysics.dll
+copy &quot;$(TargetPath)&quot; ..\..\bin\vphysics.dll
+if exist &quot;$(TargetDir)&quot;vphysics.map copy &quot;$(TargetDir)&quot;vphysics.map ..\..\bin\vphysics.map
+"/>
+			</FileConfiguration>
+		</File>
+		<File
+			RelativePath="..\lib\common\havok_mopp.lib">
+			<FileConfiguration
+				Name="Debug|Win32"
+				ExcludedFromBuild="TRUE">
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="Copying to Game Directory"
+					CommandLine="if exist ..\..\bin\vphysics.dll attrib -r ..\..\bin\vphysics.dll
+copy &quot;$(TargetPath)&quot; ..\..\bin\vphysics.dll
+if exist &quot;$(TargetDir)&quot;vphysics.map copy &quot;$(TargetDir)&quot;vphysics.map ..\..\bin\vphysics.map
+"/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32"
+				ExcludedFromBuild="TRUE">
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="Copying to Game Directory"
+					CommandLine="if exist ..\..\bin\vphysics.dll attrib -r ..\..\bin\vphysics.dll
+copy &quot;$(TargetPath)&quot; ..\..\bin\vphysics.dll
+if exist &quot;$(TargetDir)&quot;vphysics.map copy &quot;$(TargetDir)&quot;vphysics.map ..\..\bin\vphysics.map
+"/>
+			</FileConfiguration>
+		</File>
+		<File
+			RelativePath="..\lib\common\hk_base.lib">
+			<FileConfiguration
+				Name="Debug|Win32"
+				ExcludedFromBuild="TRUE">
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="Copying to Game Directory"
+					CommandLine="if exist ..\..\bin\vphysics.dll attrib -r ..\..\bin\vphysics.dll
+copy &quot;$(TargetPath)&quot; ..\..\bin\vphysics.dll
+if exist &quot;$(TargetDir)&quot;vphysics.map copy &quot;$(TargetDir)&quot;vphysics.map ..\..\bin\vphysics.map
+"/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32"
+				ExcludedFromBuild="TRUE">
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="Copying to Game Directory"
+					CommandLine="if exist ..\..\bin\vphysics.dll attrib -r ..\..\bin\vphysics.dll
+copy &quot;$(TargetPath)&quot; ..\..\bin\vphysics.dll
+if exist &quot;$(TargetDir)&quot;vphysics.map copy &quot;$(TargetDir)&quot;vphysics.map ..\..\bin\vphysics.map
+"/>
+			</FileConfiguration>
+		</File>
+		<File
+			RelativePath="..\lib\common\hk_math.lib">
+			<FileConfiguration
+				Name="Debug|Win32"
+				ExcludedFromBuild="TRUE">
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="Copying to Game Directory"
+					CommandLine="if exist ..\..\bin\vphysics.dll attrib -r ..\..\bin\vphysics.dll
+copy &quot;$(TargetPath)&quot; ..\..\bin\vphysics.dll
+if exist &quot;$(TargetDir)&quot;vphysics.map copy &quot;$(TargetDir)&quot;vphysics.map ..\..\bin\vphysics.map
+"/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32"
+				ExcludedFromBuild="TRUE">
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="Copying to Game Directory"
+					CommandLine="if exist ..\..\bin\vphysics.dll attrib -r ..\..\bin\vphysics.dll
+copy &quot;$(TargetPath)&quot; ..\..\bin\vphysics.dll
+if exist &quot;$(TargetDir)&quot;vphysics.map copy &quot;$(TargetDir)&quot;vphysics.map ..\..\bin\vphysics.map
+"/>
+			</FileConfiguration>
+		</File>
+		<File
+			RelativePath="..\lib\common\ivp_compactbuilder.lib">
+			<FileConfiguration
+				Name="Debug|Win32"
+				ExcludedFromBuild="TRUE">
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="Copying to Game Directory"
+					CommandLine="if exist ..\..\bin\vphysics.dll attrib -r ..\..\bin\vphysics.dll
+copy &quot;$(TargetPath)&quot; ..\..\bin\vphysics.dll
+if exist &quot;$(TargetDir)&quot;vphysics.map copy &quot;$(TargetDir)&quot;vphysics.map ..\..\bin\vphysics.map
+"/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32"
+				ExcludedFromBuild="TRUE">
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="Copying to Game Directory"
+					CommandLine="if exist ..\..\bin\vphysics.dll attrib -r ..\..\bin\vphysics.dll
+copy &quot;$(TargetPath)&quot; ..\..\bin\vphysics.dll
+if exist &quot;$(TargetDir)&quot;vphysics.map copy &quot;$(TargetDir)&quot;vphysics.map ..\..\bin\vphysics.map
+"/>
+			</FileConfiguration>
+		</File>
+		<File
+			RelativePath="..\lib\common\ivp_physics.lib">
+			<FileConfiguration
+				Name="Debug|Win32"
+				ExcludedFromBuild="TRUE">
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="Copying to Game Directory"
+					CommandLine="if exist ..\..\bin\vphysics.dll attrib -r ..\..\bin\vphysics.dll
+copy &quot;$(TargetPath)&quot; ..\..\bin\vphysics.dll
+if exist &quot;$(TargetDir)&quot;vphysics.map copy &quot;$(TargetDir)&quot;vphysics.map ..\..\bin\vphysics.map
+"/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32"
+				ExcludedFromBuild="TRUE">
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="Copying to Game Directory"
+					CommandLine="if exist ..\..\bin\vphysics.dll attrib -r ..\..\bin\vphysics.dll
+copy &quot;$(TargetPath)&quot; ..\..\bin\vphysics.dll
+if exist &quot;$(TargetDir)&quot;vphysics.map copy &quot;$(TargetDir)&quot;vphysics.map ..\..\bin\vphysics.map
+"/>
+			</FileConfiguration>
+		</File>
+		<File
+			RelativePath="..\lib\public\tier0.lib">
+			<FileConfiguration
+				Name="Debug|Win32"
+				ExcludedFromBuild="TRUE">
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="Copying to Game Directory"
+					CommandLine="if exist ..\..\bin\vphysics.dll attrib -r ..\..\bin\vphysics.dll
+copy &quot;$(TargetPath)&quot; ..\..\bin\vphysics.dll
+if exist &quot;$(TargetDir)&quot;vphysics.map copy &quot;$(TargetDir)&quot;vphysics.map ..\..\bin\vphysics.map
+"/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32"
+				ExcludedFromBuild="TRUE">
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="Copying to Game Directory"
+					CommandLine="if exist ..\..\bin\vphysics.dll attrib -r ..\..\bin\vphysics.dll
+copy &quot;$(TargetPath)&quot; ..\..\bin\vphysics.dll
+if exist &quot;$(TargetDir)&quot;vphysics.map copy &quot;$(TargetDir)&quot;vphysics.map ..\..\bin\vphysics.map
+"/>
+			</FileConfiguration>
+		</File>
+		<File
+			RelativePath="..\lib\public\vstdlib.lib">
+			<FileConfiguration
+				Name="Debug|Win32"
+				ExcludedFromBuild="TRUE">
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="Copying to Game Directory"
+					CommandLine="if exist ..\..\bin\vphysics.dll attrib -r ..\..\bin\vphysics.dll
+copy &quot;$(TargetPath)&quot; ..\..\bin\vphysics.dll
+if exist &quot;$(TargetDir)&quot;vphysics.map copy &quot;$(TargetDir)&quot;vphysics.map ..\..\bin\vphysics.map
+"/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32"
+				ExcludedFromBuild="TRUE">
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="Copying to Game Directory"
+					CommandLine="if exist ..\..\bin\vphysics.dll attrib -r ..\..\bin\vphysics.dll
+copy &quot;$(TargetPath)&quot; ..\..\bin\vphysics.dll
+if exist &quot;$(TargetDir)&quot;vphysics.map copy &quot;$(TargetDir)&quot;vphysics.map ..\..\bin\vphysics.map
+"/>
+			</FileConfiguration>
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>
